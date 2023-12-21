@@ -6,9 +6,12 @@ import os
 
 # Initialize OpenAI client from environment variable
 
-os.environ["OPEN_API_KEY"] == st.secrets["OPEN_API_KEY"]
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
+# os.environ["OPEN_API_KEY"] == st.secrets["OPEN_API_KEY"]
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# openai.api_key = OPENAI_API_KEY
+
+openai.api_key = st.secrets["OPEN_API_KEY"]
+
 
 # Function to save audio data to a WAV file
 def save_audio_data(audio_data, filename="temp_audio.wav"):

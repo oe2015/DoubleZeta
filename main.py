@@ -33,6 +33,7 @@ def transcribe(filename):
 def summarize_text(text, custom_prompt):
     # prompt = "Summarize the following text into structured notes:"
     prompt = custom_prompt if custom_prompt else "Summarize the following text into structured notes:"
+    prompt += "In English"
     response = openai.chat.completions.create(
         model="gpt-4",
         messages=[

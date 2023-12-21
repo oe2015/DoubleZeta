@@ -5,10 +5,9 @@ import io
 import os
 
 # Initialize OpenAI client from environment variable
+
+os.environ["OPEN_API_KEY"] == st.secrets["OPEN_API_KEY"]
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-if not OPENAI_API_KEY:
-    st.error("OpenAI API key not found. Please set it in the environment variables.")
-    st.stop()
 openai.api_key = OPENAI_API_KEY
 
 # Function to save audio data to a WAV file

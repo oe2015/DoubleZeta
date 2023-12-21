@@ -4,7 +4,7 @@ import openai
 import io
 
 # Initialize OpenAI client
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 # Function to save audio data to a WAV file

@@ -2,9 +2,13 @@ import streamlit as st
 from st_audiorec import st_audiorec
 import openai
 import io
+import os
 
-# Initialize OpenAI client
-OPENAI_API_KEY = "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"
+# Initialize OpenAI client from environment variable
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if not OPENAI_API_KEY:
+    st.error("OpenAI API key not found. Please set it in the environment variables.")
+    st.stop()
 openai.api_key = OPENAI_API_KEY
 
 # Function to save audio data to a WAV file
